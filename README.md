@@ -1,10 +1,4 @@
-[]
-#THacks2 project
-
-
-
 Sociafy-- leading to better parties.
-
 
 # Sociafy
 
