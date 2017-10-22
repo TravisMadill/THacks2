@@ -8,9 +8,15 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
+				{{#if user}}
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="/auth/spotify">New Playlist</a>
 				</li>
+				{{else}}
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="/logout">Log out</a>
+				</li>
+				{{/if}}
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#options">Options</a>
 				</li>
@@ -36,7 +42,9 @@
 				<label for="usr"></label>
 				<p>Hey, {{user.displayName}}! You're ready to start jammin' to your favourite tunes!</p>
 				<a class="btn btn-primary btn-xl js-scroll-trigger" href="/createroom">Create a party playlist</a>
-				<a class="btn btn-primary btn-xl js-scroll-trigger" href="/join">Join an existing party</a>	
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="/join">Join an existing party</a>
+				<br />
+				<a href="/logout">...or log out if you need to.</a>
 			</div>
 			{{else}}
 			<div class="form-group">

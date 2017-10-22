@@ -8,6 +8,16 @@ const session = require('express-session')
 const passport = require('passport')
 const SpotifyStrategy = require('passport-spotify').Strategy;
 var consolidate = require('consolidate');
+var requeest = require('request');
+
+var token = null;
+
+var firebase = require("firebase-admin")
+var serviceAccount = require(__dirname + "/socialplaylist.json")
+firebase.initializeApp({
+	credential: firebase.credential.cert(serviceAccount),
+	databaseURL: "https://socialplaylist-d5012.firebaseio.com"
+})
 
 
 passport.serializeUser(function(user, done) {
@@ -25,6 +35,7 @@ passport.use(new SpotifyStrategy({
 },
 	function (accessToken, refreshToken, profile, done) {
 		process.nextTick(function(){
+			token = accessToken;
 			return done(null, profile);
 		})
 	}
@@ -35,7 +46,7 @@ const app = express()
 app.use(cookieParser());
 app.use(bodyParser());
 app.use(methodOverride());
-app.use(session({ secret: 'Inspiring THacks, I guess' }));
+app.use(session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -50,10 +61,51 @@ app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'views'))
 
 app.get('/', (request, response) => {
-	console.log(request.user);
 	response.render('home', {
 		user: request.user
 	})
+})
+
+app.get('/api/search', isLoggedIn, (request, response) => {
+	requeest.get({
+		url: "https://api.spotify.com/v1/search?type=track,artist&q=" + request.params.name,
+		auth: {
+			'bearer': token,
+			'Accept': 'application/json'
+		},
+		json:true
+	}, function (err, res) {
+		response.writeHead(200, {"Content-Type": "application/json"});
+		response.end(JSON.stringify(res.body))
+	});
+})
+
+app.get('/api/search/artists', isLoggedIn, (request, response) => {
+	requeest.get({
+		url: "https://api.spotify.com/v1/search?type=artist&q=" + request.params.name,
+		auth: {
+			'bearer': token,
+			'Accept': 'application/json'
+		},
+		json:true
+	}, function (err, res) {
+		response.writeHead(200, {"Content-Type": "application/json"});
+		response.end(JSON.stringify(res.body))
+	});
+})
+
+app.get('/api/search/tracks', isLoggedIn, (request, response) => {
+	requeest.get({
+		url: "https://api.spotify.com/v1/search?type=track&q=" + request.params.name,
+		auth: {
+			'bearer': token,
+			'Accept': 'application/json'
+		},
+		json:true
+	}, function (err, res) {
+		response.writeHead(200, {"Content-Type": "application/json"});
+		response.end(JSON.stringify(res.body))
+	});
 })
 
 app.get('/search', isLoggedIn, (request, response) => {
@@ -97,7 +149,7 @@ app.get('/vendor/*', (request, response, next) => {
 })
 
 app.get('/auth/spotify',
-	passport.authenticate('spotify', {scope: [], showDialog: true }),
+	passport.authenticate('spotify', {scope: ['user-read-playback-state'], showDialog: true }),
 	function (req, res) {
 		// The request will be redirected to spotify for authentication, so this
 		// function will not be called.

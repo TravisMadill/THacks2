@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "socialplaylist-d5012",
+  "private_key_id": "c47d85a6d8f1178b78327020a699a21483ba63b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDozGQt4WWMlRop\nksklEfmPveBJ+KiIfXhwYc5Gb9t+P1F9rQb35k7F1EuXCbtIxnYqG6lQaNyUWMc1\n79oEUi/g+VcBML9pxNAuLEjFwiELVdCKBf6VVDKgJCwgtHlGsjYpr/W/w4EC+a+a\nWSF2Xd3vfWXSFVTHK0AVHOUTvhTydDaDMO4nQfqtsX/r1FTfx3Mw1AjJ6LvIot1A\n7d/1XJH7VglrAX/4IJb6GeVULr7nUhL1HgOkY2GfCyIyrKS7FxYSRWJ6iKo0V6Bi\n4qNHWe98NmrqZYwV82W1ep1eHR0TszQ5h7eevoCa4AT+iUVMMW7rz4XODjw5nE8H\nKbfRwAf5AgMBAAECggEAJc5DmpvXFPyF0iiPV+DSaYCJcxnZrMjLjVyk1hWGTLtV\nrZYy4oFZW5E9cVrYOlpYiEATwAY3hDPiriS0gC0kr2FuurfC7hdTQ5xXeR4spZ2b\nDz8n9/JDgnQ9YlZMt6lrWFvGCg1i3yvTU7qTz5gw2ZrAtVxXdzzT3Fnj7c/ZsQHV\nINQwhZuKEIF2Ps3iH4D1dlrCjCjSztbVUDhk2SJZ/2OgGH3avcoMux9QLiYf5mGZ\nhX9tGCddpSqRWOHk2bgcOO+E0AYxTibGbzDCqvVlm3GmQmQUiphS/NbNqWjtWKTX\n/DJZ0vw/J4dyaGnj2K7HymCuKuCVh6CL2qOTpT43bQKBgQD7kBZBPzoA1reuv1Yj\nrd1gLjR3igDB/cJYa8eaQvgO3q5Ith5gxR4Q3h4DOf06xh+Y85qPFj8C+f72x4l0\np6fKRKPnIYO8twfG0TcMRkab24Eotf9WDIc0xCTlbDkDnkH6ldFZJVDB+T1mYWee\ncgWEQZpEmGHfTbwy0SlRVJnRWwKBgQDs55MyytQyaYU2XCO6rLqX/mibmDJ4RfFU\nGWVc0s/PocaT2CBnfPqfMV3F7LmoMpNj04x8MLUtAoOIvBhk7jN6DohyxYxEoGdi\nUDE72UP/QJvROZxVMZhQqklFWXmGW9IlJSKuTKO9uQZSgyWKys932rZcLyMCKbb9\nzZNV5XjYOwKBgQDG6gb+7qzBrwatEbReIAOVItPv1dqFik7bNdYt31hgAapT6lWY\n9SSx98BJktfuWmzvt2f2ToPiqaT2o47IBC3D3YSwpSqS1TM7/YCGnycD5Ix7kXVm\nKB/dFF+MXYezmbbYGxDfaYcy6g6n3stdWRGNo4YFSWzScpgmoocGPVwnUwKBgQCe\nBosF4o5RYlndvPCIYRfGs4mL4KYp3F3yP06B8I12bu9LR2u2HIQBFKj8kb/2FmaC\nvGaFoOf5sieTWgTbrpjf3jnedS/vxx+vUNbGmVLmPW6yzb8ehQqZJD3j6J9LpIw1\nAuRzZ+QBdh5lg93TCx4BUP871qV/l9vcyPhy37MQaQKBgHNeg8PZQnIXvH+4y+Kl\n9zKieSn29r8zcjTb5jLu7dLWEaGn516rb0ACStOwtoGfGDqB0M+39CA4QFB7vUn9\nUp5VeUNl3CiVdAJGAyLpqQhrxKX8bavJNggrzg0xu1NECDdVDSsdwHqCqnfNtx1+\nCTlqFNyIGF/+Nooj1Eu76r5O\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-nhmp6@socialplaylist-d5012.iam.gserviceaccount.com",
+  "client_id": "104010674290293370139",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nhmp6%40socialplaylist-d5012.iam.gserviceaccount.com"
+}
